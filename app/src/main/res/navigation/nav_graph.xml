@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rocketkids.science.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/learnFragment"
+        android:name="com.rocketkids.science.LearnFragment"
+        android:label="Learn"
+        tools:layout="@layout/fragment_learn" />
+
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.rocketkids.science.PlayFragment"
+        android:label="Play"
+        tools:layout="@layout/fragment_play">
+        <action
+            android:id="@+id/action_play_to_labelRocket"
+            app:destination="@id/labelRocketFragment" />
+        <action
+            android:id="@+id/action_play_to_launchSimulation"
+            app:destination="@id/launchSimulationFragment" />
+        <action
+            android:id="@+id/action_play_to_matchTerms"
+            app:destination="@id/matchTermsFragment" />
+        <action
+            android:id="@+id/action_play_to_buildRocket"
+            app:destination="@id/buildRocketFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/labelRocketFragment"
+        android:name="com.rocketkids.science.LabelRocketFragment"
+        tools:layout="@layout/fragment_label_rocket" />
+
+    <fragment
+        android:id="@+id/launchSimulationFragment"
+        android:name="com.rocketkids.science.LaunchSimulationFragment"
+        tools:layout="@layout/fragment_launch_simulation" />
+
+    <fragment
+        android:id="@+id/matchTermsFragment"
+        android:name="com.rocketkids.science.MatchTermsFragment"
+        tools:layout="@layout/fragment_match_terms" />
+
+    <fragment
+        android:id="@+id/buildRocketFragment"
+        android:name="com.rocketkids.science.BuildRocketFragment"
+        tools:layout="@layout/fragment_build_rocket" />
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.rocketkids.science.QuizFragment"
+        android:label="Quiz"
+        tools:layout="@layout/fragment_quiz" />
+
+    <fragment
+        android:id="@+id/AboutMeFragment"
+        android:name="com.rocketkids.science.AboutMeFragment"
+        tools:layout="@layout/fragment_about_me" />
+</navigation>

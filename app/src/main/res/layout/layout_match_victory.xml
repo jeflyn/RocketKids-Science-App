@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/victory_overlay_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/toolbar"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="Celebration Confetti"
+        android:src="@drawable/congrats" /> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:text="Perfect Match!"
+    android:textColor="#10B981"
+    android:textSize="28sp"
+    android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="You matched all 4 terms correctly!"
+        android:textColor="#94A3B8"
+        android:textSize="15sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_play_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        android:text="Play Again"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FF6B00"
+        app:cornerRadius="20dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+</LinearLayout>

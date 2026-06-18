@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0B0E14">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn 📚"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tab_intro"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:text="Intro"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:paddingHorizontal="18dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@drawable/tab_selector_background"
+                android:textColor="@color/tab_text_color_selector"
+                app:backgroundTint="@null"
+                app:elevation="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tab_forces"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:text="Forces"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:paddingHorizontal="18dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@drawable/tab_selector_background"
+                android:textColor="@color/tab_text_color_selector"
+                app:backgroundTint="@null"
+                app:elevation="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tab_rockets"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:text="Rockets"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:paddingHorizontal="18dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@drawable/tab_selector_background"
+                android:textColor="@color/tab_text_color_selector"
+                app:backgroundTint="@null"
+                app:elevation="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tab_facts"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:text="Facts"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:paddingHorizontal="18dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@drawable/tab_selector_background"
+                android:textColor="@color/tab_text_color_selector"
+                app:backgroundTint="@null"
+                app:elevation="0dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/view_container_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rocket_launch_image" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#241411">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌍 The Big Question" android:textColor="#FF7A59" android:textStyle="bold" android:textSize="16sp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Have you ever wondered how a rocket — which can weigh millions of kilograms — can escape Earth and fly into space? It's all about FORCES! 💪" android:textColor="#F1F5F9" android:textSize="14sp" android:layout_marginTop="8dp" android:lineSpacingExtra="4sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <VideoView
+                            android:id="@+id/video_view_launcher"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center" />
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fab_play_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@android:drawable/ic_media_play"
+                            app:backgroundTint="@color/rocket_orange"
+                            app:tint="@color/text_white"
+                            android:contentDescription="Play Launch Video" />
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#161B22">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔑 Key Words" android:textColor="#FFC107" android:textStyle="bold" android:textSize="16sp" android:layout_marginBottom="12dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Gravity:" android:textColor="#FF5722" android:textStyle="bold"/>
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A force that pulls objects toward Earth's centre" android:textColor="#94A3B8"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Thrust:" android:textColor="#FF5722" android:textStyle="bold"/>
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="The pushing force produced by rocket engines" android:textColor="#94A3B8"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Orbit:" android:textColor="#FF5722" android:textStyle="bold"/>
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Moving in a curved path around Earth" android:textColor="#94A3B8"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Velocity:" android:textColor="#FF5722" android:textStyle="bold"/>
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Speed in a specific direction" android:textColor="#94A3B8"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_container_forces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#1E293B">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/tv_forces_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚖️ Forces on a Rocket"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iv_forces_diagram_core"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/forces_on_rocket"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintTop_toBottomOf="@id/tv_forces_title"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#111E2F"
+                    app:strokeColor="#1E3A8A"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🌍 What is Gravity?"
+                            android:textColor="#3B82F6"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gravity is an invisible force that Earth uses to pull everything toward its centre. The bigger an object, the stronger its gravity. Without gravity, we'd float off into space! Earth's gravity pulls at 9.8 m/s²."
+                            android:textColor="#F1F5F9"
+                            android:textSize="14sp"
+                            android:layout_marginTop="8dp"
+                            android:lineSpacingExtra="4sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#241411"
+                    app:strokeColor="#7C2D12"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔥 What is Thrust?"
+                            android:textColor="#FF7A59"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rocket engines burn propellant (fuel + oxygen) to create HOT gases. These gases shoot downward at incredible speed, which pushes the rocket UPWARD!"
+                            android:textColor="#F1F5F9"
+                            android:textSize="14sp"
+                            android:layout_marginTop="8dp"
+                            android:lineSpacingExtra="4sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp"
+                            android:padding="12dp"
+                            android:background="@drawable/nested_law_badge_background">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="⚡ Newton's 3rd Law: Every action has an equal and opposite reaction!"
+                                android:textColor="#EA580C"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:lineSpacingExtra="2sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_container_rockets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rocket_launch_image" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#161B22"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🚀 Multi-Stage Rockets"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rockets are built in stages to save weight! When a stage burns all its fuel, it separates and falls away. The lighter rocket then accelerates faster and reaches higher altitudes!"
+                            android:textColor="#F1F5F9"
+                            android:textSize="14sp"
+                            android:layout_marginTop="8dp"
+                            android:lineSpacingExtra="4sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#0B192C"
+                    app:strokeColor="#1E3A8A"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📦 Rocket Stages (Top → Bottom)"
+                            android:textColor="#38BDF8"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="16dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="top"
+                            android:layout_marginBottom="12dp">
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:background="@drawable/bullet_dot_cyan" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="🛸 Payload / Capsule"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="The spacecraft, satellite, or astronauts delivered to orbit"
+                                    android:textColor="#94A3B8"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="2dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="top"
+                            android:layout_marginBottom="12dp">
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:background="@drawable/bullet_dot_purple" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="🔵 Second Stage"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Final push to reach orbital speed — detaches from Stage 1"
+                                    android:textColor="#94A3B8"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="2dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="top">
+                            <View
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:background="@drawable/bullet_dot_orange" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="🔴 First Stage (Booster)"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Largest &amp; most powerful — lifts the rocket off the ground!"
+                                    android:textColor="#94A3B8"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="2dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#241411"
+                    app:strokeColor="#7C2D12"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚡ Escape Velocity"
+                            android:textColor="#FF7A59"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To escape Earth's gravity completely, a rocket needs to reach 11.2 km/s — that's ~40,000 km/h! Like flying from London to New York in just 18 minutes! ✈️"
+                            android:textColor="#F1F5F9"
+                            android:textSize="14sp"
+                            android:layout_marginTop="8dp"
+                            android:lineSpacingExtra="4sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_container_facts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rocket_moon" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="☀️ Amazing Space Facts!"
+                    android:textColor="#00E5FF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="#161B22"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🌙 Moon Distance"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="The Moon is 384,400 km away. Apollo 11 took 3 days to get there in 1969!"
+                            android:textColor="#94A3B8"
+                            android:textSize="13sp"
+                            android:layout_marginTop="4dp"
+                            android:lineSpacingExtra="2sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardBackgroundColor="#161B22"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🏃 ISS Speed"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="The International Space Station travels at 27,600 km/h, orbiting Earth every 90 minutes!"
+                            android:textColor="#94A3B8"
+                            android:textSize="13sp"
+                            android:layout_marginTop="4dp"
+                            android:lineSpacingExtra="2sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardBackgroundColor="#161B22"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🏗️ Saturn V Rocket"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Saturn V was as tall as a 36-storey building. Its engines generated 34 million newtons of thrust!"
+                            android:textColor="#94A3B8"
+                            android:textSize="13sp"
+                            android:layout_marginTop="4dp"
+                            android:lineSpacingExtra="2sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardBackgroundColor="#161B22"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🌡️ Space Temperature"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Space can be -270 °C in shadow, but +120 °C in direct sunlight — a 390-degree difference!"
+                            android:textColor="#94A3B8"
+                            android:textSize="13sp"
+                            android:layout_marginTop="4dp"
+                            android:lineSpacingExtra="2sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardBackgroundColor="#161B22"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🚀 First Rocket"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="The first rocket capable of launching into space was the V-2 rocket, developed back in 1942."
+                            android:textColor="#94A3B8"
+                            android:textSize="13sp"
+                            android:layout_marginTop="4dp"
+                            android:lineSpacingExtra="2sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.RocketKids.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#161B22"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="💧 Clean Fuel"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Liquid hydrogen + liquid oxygen = water exhaust! The Space Shuttle's main engines were surprisingly clean."
+                            android:textColor="#94A3B8"
+                            android:textSize="13sp"
+                            android:layout_marginTop="4dp"
+                            android:lineSpacingExtra="2sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0E14"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="12dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="🚀 Launch Simulation"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:text="Adjust thrust and hit LAUNCH!"
+        android:textColor="#94A3B8"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/metrics_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_subtitle"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#161B22"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="THRUST" android:textColor="#64748B" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/txt_metric_thrust" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:textColor="#FF6B00" android:textSize="15sp" android:textStyle="bold" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#161B22"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginHorizontal="3dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ALTITUDE" android:textColor="#64748B" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/txt_metric_altitude" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 km" android:textColor="#00E5FF" android:textSize="15sp" android:textStyle="bold" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#161B22"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginStart="6dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STATUS" android:textColor="#64748B" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/txt_metric_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ready" android:textColor="#A855F7" android:textSize="15sp" android:textStyle="bold" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/space_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/controls_container"
+        android:layout_below="@id/metrics_panel"
+        android:layout_margin="16dp"
+        android:background="#05070B">
+
+        <ImageView
+            android:id="@+id/img_sim_rocket"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/rocket_launch" /> </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/lbl_engine_thrust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥 Engine Thrust"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_thrust_comparison"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Less than Gravity ❌"
+                android:textColor="#EF4444"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/slider_thrust"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#FF6B00"
+            android:thumbTint="#FF6B00" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingHorizontal="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0% (No thrust)" android:textColor="#475569" android:textSize="11sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="100% (Max)" android:textColor="#475569" android:textSize="11sp"/>
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_action_launch"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:text="🚀 LAUNCH!"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FF6B00"
+            app:cornerRadius="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

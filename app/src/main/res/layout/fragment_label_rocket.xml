@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0E14"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="12dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back Button"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔍 Label the Rocket"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:text="Tap the coloured dots to discover each part!"
+        android:textColor="#94A3B8"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:id="@+id/progress_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_subtitle"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parts discovered"
+            android:textColor="#64748B"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_parts_discovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="0 / 6"
+            android:textColor="#FF6B00"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_discovered"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/txt_parts_discovered"
+            android:layout_marginTop="6dp"
+            android:progressDrawable="@drawable/custom_progress_orange" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rocket_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/card_description_container"
+        android:layout_below="@id/progress_container"
+        android:layout_margin="24dp">
+
+        <ImageView
+            android:id="@+id/img_rocket_blueprint"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rocket_launch" />
+
+        <View
+            android:id="@+id/dot_nose_cone"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@id/img_rocket_blueprint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_dot_cyan" />
+
+        <View
+            android:id="@+id/dot_payload_bay"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@id/img_rocket_blueprint"
+            android:layout_alignEnd="@id/img_rocket_blueprint"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="130dp"
+            android:background="@drawable/selector_dot_cyan" />
+
+        <View
+            android:id="@+id/dot_fuel_tank"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@id/img_rocket_blueprint"
+            android:layout_alignStart="@id/img_rocket_blueprint"
+            android:layout_marginTop="180dp"
+            android:layout_marginStart="110dp"
+            android:background="@drawable/selector_dot_cyan" />
+
+        <View
+            android:id="@+id/dot_oxidizer_tank"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@id/img_rocket_blueprint"
+            android:layout_alignEnd="@id/img_rocket_blueprint"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="90dp"
+            android:background="@drawable/selector_dot_cyan" />
+
+        <View
+            android:id="@+id/dot_stabiliser_fins"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@id/img_rocket_blueprint"
+            android:layout_alignStart="@id/img_rocket_blueprint"
+            android:layout_marginBottom="90dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/selector_dot_cyan" />
+
+        <View
+            android:id="@+id/dot_engine_nozzle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@id/img_rocket_blueprint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/selector_dot_cyan" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_description_container"
+        style="@style/Widget.RocketKids.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#1A1514"
+        app:strokeColor="#3D201A"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/txt_part_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tap a dot above!"
+                android:textColor="#FF6B00"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_part_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4sp"
+                android:text="Select any colored highlight nodes on the rocket body structure above to explore its core science breakdown."
+                android:textColor="#F1F5F9"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

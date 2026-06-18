@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#0B0E14">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activities ⚡"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose an activity to start learning!"
+            android:textColor="#64748B"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_game_label_rocket"
+            style="@style/Widget.RocketKids.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#0C2533"
+            app:strokeColor="#104A66"
+            app:strokeWidth="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/ico_label_rocket"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bullet_dot_cyan"
+                    android:backgroundTint="#143A4F"
+                    android:gravity="center"
+                    android:text="🔍"
+                    android:textSize="22sp"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toStartOf="@id/arrow_label_rocket"
+                    android:layout_toEndOf="@id/ico_label_rocket"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Label the Rocket"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tap rocket parts to discover what they do!"
+                        android:textColor="#94A3B8"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dynamic Annotation"
+                        android:textColor="#00BAFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="3dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bullet_dot_cyan"
+                        android:backgroundTint="#0A445C" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/arrow_label_rocket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="#104A66"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_game_match_terms"
+            style="@style/Widget.RocketKids.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#211533"
+            app:strokeColor="#422566"
+            app:strokeWidth="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/ico_match_terms"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bullet_dot_purple"
+                    android:backgroundTint="#331E4F"
+                    android:gravity="center"
+                    android:text="🎯"
+                    android:textSize="22sp"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toStartOf="@id/arrow_match_terms"
+                    android:layout_toEndOf="@id/ico_match_terms"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Match the Terms"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Click science terms and match their definitions!"
+                        android:textColor="#94A3B8"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Object Transformation"
+                        android:textColor="#A855F7"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="3dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bullet_dot_purple"
+                        android:backgroundTint="#3C1A5C" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/arrow_match_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="#422566"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_game_launch_simulation"
+            style="@style/Widget.RocketKids.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#2E1914"
+            app:strokeColor="#5E2B1F"
+            app:strokeWidth="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/ico_launch_sim"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bullet_dot_orange"
+                    android:backgroundTint="#42221A"
+                    android:gravity="center"
+                    android:text="🚀"
+                    android:textSize="22sp"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toStartOf="@id/arrow_launch_sim"
+                    android:layout_toEndOf="@id/ico_launch_sim"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Launch Simulation"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adjust thrust and watch your rocket launch!"
+                        android:textColor="#94A3B8"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Animation &amp; Simulation"
+                        android:textColor="#FF5722"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="3dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bullet_dot_orange"
+                        android:backgroundTint="#542318" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/arrow_launch_sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="#5E2B1F"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_game_build_rocket"
+            style="@style/Widget.RocketKids.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#0D261F"
+            app:strokeColor="#174D3E"
+            app:strokeWidth="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/ico_build_rocket"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bullet_dot_cyan"
+                    android:backgroundTint="#133B30"
+                    android:gravity="center"
+                    android:text="🔧"
+                    android:textSize="22sp"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toStartOf="@id/arrow_build_rocket"
+                    android:layout_toEndOf="@id/ico_build_rocket"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Build the Rocket"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drag rocket stages into the correct order!"
+                        android:textColor="#94A3B8"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drag &amp; Drop"
+                        android:textColor="#10B981"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="3dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bullet_dot_cyan"
+                        android:backgroundTint="#0E4235" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/arrow_build_rocket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="#174D3E"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

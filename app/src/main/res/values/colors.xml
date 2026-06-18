@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rocket_orange">#FF5722</color>
+    <color name="space_dark_bg">#0B0E14</color>
+    <color name="component_surface">#161B22</color>
+    <color name="border_grey">#1F2633</color>
+
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_muted">#94A3B8</color>
+
+    <color name="state_correct_bg">#1B4D3E</color>
+    <color name="state_correct_border">#10B981</color>
+    <color name="state_incorrect_bg">#4A1D19</color>
+    <color name="state_incorrect_border">#EF4444</color>
+
+</resources>

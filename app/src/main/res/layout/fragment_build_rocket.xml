@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0E14"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="12dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="🔧 Build the Rocket"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_desc_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:text="Drag stages into the correct order (top to bottom)"
+        android:textColor="#94A3B8"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/info_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_desc_instruction"
+        android:layout_margin="16dp"
+        android:background="#211510"
+        android:padding="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧩 Arrange from Payload (top) to Engine Cluster (bottom). Drag to reorder!"
+            android:textColor="#FF9800"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_stages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_banner"
+        android:layout_above="@+id/victory_success_card"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false" />
+
+    <LinearLayout
+        android:id="@+id/victory_success_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons_container"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="#0C211A"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"> <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/congrats" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Perfect Assembly!"
+            android:textColor="#10B981"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="You built the rocket correctly from top to bottom!"
+            android:textColor="#A7F3D0"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_check_answer"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="2"
+            android:layout_marginEnd="8dp"
+            android:text="✅ Check Answer"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#FF6B00"
+            app:cornerRadius="14dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="🔄 Reset"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#21262D"
+            app:strokeColor="#30363D"
+            app:strokeWidth="1dp"
+            app:cornerRadius="14dp" />
+    </LinearLayout>
+
+</RelativeLayout>
